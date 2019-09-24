@@ -72,7 +72,7 @@ while not isinstance(goal, int):
 months = 0
 extra = 0
 monthly_gain = ((1+(percent_gain/100))**(1.0/60)-1)
-print(monthly_gain)
+monthly_dividend = dividend/12/100
 total_value = current_shares * stock_price
 
 while total_value*(dividend/12/100) <= goal:
@@ -80,7 +80,7 @@ while total_value*(dividend/12/100) <= goal:
     current_shares += int(monthly_addition/stock_price)
     stock_price = stock_price + (stock_price*monthly_gain)
     extra += monthly_addition%stock_price
-    extra += total_value*(dividend/12/100)
+    extra += total_value*monthly_dividend
     print(extra)
     if extra/stock_price >= 1:
         current_shares += int(extra/stock_price)
