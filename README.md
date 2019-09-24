@@ -1,5 +1,7 @@
 # ROI
 There are no imports for this scripts. So you just download them run. 
+DividendROI.py is for the typical investment with an ROI goal.
+passiveDividend.py is for the goal of a passive income.
 
 The goal of the scripts is to take past performance for an investement, 5yr growth for example, and give you an accurate prediction on how this stock can perform given some other parameters that you give it. 
 1. Current Stock Price - The current value of a stock or investment you are looking into. Needs to be a float/int
