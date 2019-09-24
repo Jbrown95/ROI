@@ -1,6 +1,9 @@
 stock_price = ""
 while not isinstance(stock_price, float):
-    stock_price = input("Input price of individual Stock(Float): ")
+    try:
+        stock_price = input("Input price of individual Stock(Float): ")
+    except SyntaxError:
+        stock_price = None
     try:
         stock_price = float(stock_price)
         print(stock_price)
@@ -9,7 +12,10 @@ while not isinstance(stock_price, float):
 
 percent_gain = ""
 while not isinstance(percent_gain, float):
-    percent_gain = input("What is the % gain over the last 5yrs(Float)?: ")
+    try:
+        percent_gain = input("What is the % gain over the last 5yrs(Float)?: ")
+    except SyntaxError:
+        percent_gain = None
     try:
         percent_gain = float(percent_gain)
         print(percent_gain)
@@ -18,7 +24,10 @@ while not isinstance(percent_gain, float):
 
 dividend = ""
 while not isinstance(dividend, float):
-    dividend = input("What is the dividend yield?: ")
+    try:
+        dividend = input("What is the dividend yield?: ")
+    except SyntaxError:
+        dividend = None
     try:
         dividend = float(dividend)
         print(dividend)
@@ -27,7 +36,10 @@ while not isinstance(dividend, float):
 
 current_shares = ""
 while not isinstance(current_shares, int):
-    current_shares = input("How many shares do you currently have?: ")
+    try:
+        current_shares = input("How many shares do you currently have?: ")
+    except SyntaxError:
+        current_shares = None
     try:
         current_shares = int(current_shares)
         print(current_shares)
@@ -36,7 +48,10 @@ while not isinstance(current_shares, int):
 
 monthly_addition = ""
 while not isinstance(monthly_addition, float):
-    monthly_addition = input("How much money can you spend on new shares every month? : ")
+    try:
+        monthly_addition = input("How much money can you spend on new shares every month? : ")
+    except SyntaxError:
+        monthly_addition = None
     try:
         monthly_addition = float(monthly_addition)
         print(monthly_addition)
@@ -45,7 +60,10 @@ while not isinstance(monthly_addition, float):
 
 goal = ""
 while not isinstance(goal, int):
-    goal = input("What is goal amount(in $)/month? : ")
+    try:
+        goal = input("What is goal amount(in $)? : ")
+    except SyntaxError:
+        goal = None
     try:
         goal = int(goal)
         print(goal)
