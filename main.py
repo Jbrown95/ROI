@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3
+
 #imports dictionaries
 from dict import *
 #imports get_info
